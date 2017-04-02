@@ -1,0 +1,27 @@
+<div>
+    <div ng-controller="MenuController">
+
+        <div ng-repeat="obj in tasks" >
+            <md-card>
+                <span>{{obj.text}}</span>
+            </md-card>
+        </div>
+
+        <md-button class="md-warn" ng-show="!flag" ng-click="showTasks()">Add Task</md-button>
+
+        <div class="addComent" ng-show="flag" layout="column">
+
+                <md-content layout-padding>
+                    <form name="comentForm">
+
+                        <md-input-container class="md-block">
+                            <textarea required ng-model="task.text" placeholder="Example to do GC work"></textarea>
+                        </md-input-container>
+                        <md-button class="md-raised md-primary" ng-click="addTask(task)">Add Task</md-button>
+                        <md-button class="md-primary" ng-show="flag" ng-click="showTasks()">Cancel</md-button>
+                    </form>
+                </md-content>
+        </div>
+    </div>
+</div>
+

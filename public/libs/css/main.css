@@ -1,0 +1,10 @@
+.md-button.md-fab.md-fab-bottom-left {
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 20px;
+    position: fixed;
+}
+.md-grid {
+    position: fixed;
+}
