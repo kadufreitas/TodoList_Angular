@@ -1,10 +1,18 @@
 <div>
     <div ng-controller="MenuController">
 
-        <div ng-repeat="obj in tasks" >
-            <md-card>
-                <span>{{obj.text}}</span>
-            </md-card>
+        <div ng-repeat="obj in tasks ">
+            <div ng-if="obj.done == false">
+                <md-divider ></md-divider>
+                <md-content style="margin-top: 10px" >
+                
+                    <md-checkbox ng-model="done" ng-change="taskDone(obj)" aria-label="Checkbox 1">
+                        <span>{{obj.text}}</span>
+                    </md-checkbox>
+
+                </md-content>
+                <md-divider ></md-divider>
+            </div>
         </div>
 
         <md-button class="md-warn" ng-show="!flag" ng-click="showTasks()">Add Task</md-button>

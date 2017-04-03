@@ -1,4 +1,4 @@
-(function () {
+(function() {
 
     var myAppModule = angular.module('MyApp');
 
@@ -7,5 +7,7 @@
     };
 
     HttpService.$inject = ['$http'];
-    myAppModule.service('HttpService',HttpService);
+
+    myAppModule.service('HttpService', HttpService);
+
 }());
