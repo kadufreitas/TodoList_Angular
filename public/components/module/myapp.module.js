@@ -7,8 +7,15 @@
             templateUrl: 'components/templates/index.html',
             controller: 'MenuController'
         };
+        var made = {
+            name: 'made',
+            url: '/made',
+            templateUrl: 'components/templates/made.html',
+            controller: 'MenuController'
+        };
 
     $stateProvider.state(index);
+    $stateProvider.state(made);
     $urlRouterProvider.otherwise('/');
     };
 
